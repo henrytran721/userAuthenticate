@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <%if(user) {%>
+            <h1>Welcome Back <%= user.username %></h1>
+            <a href='log-out'>Log Out</a>
+        <%} else {%>
+        <h1>Please log in</h1>
+        <form method='POST' action='/log-in'>
+            <label for='username'>Username</label>
+            <input name='username' placeholder='username' type='text' />
+            <label for='password'>Password</label>
+            <input name='password' type='password' />
+            <button>Log In</button>
+        </form>
+        <%}%>
+    </body>
+</html>
