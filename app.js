@@ -8,7 +8,11 @@ const bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
 const dotenv = require('dotenv').config();
 
+<<<<<<< HEAD
 const mongoDb = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-gevd4.azure.mongodb.net/userAuthentication?retryWrites=true&w=majority`;
+=======
+const mongoDb = 'mongodb+srv://henrytran721:<passwordhere>@cluster0-gevd4.azure.mongodb.net/userAuthentication?retryWrites=true&w=majority';
+>>>>>>> 277609cd21bc35777ab0e125ee600c0b2ed11997
 mongoose.connect(mongoDb, {useUnifiedTopology: true, useNewUrlParser: true});
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
